@@ -1,0 +1,5 @@
+composer.lock
+config.local.php
+/.idea/
+/log/
+/thumb/

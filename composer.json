@@ -1,0 +1,27 @@
+{
+  "name": "swoole-clip/thumb",
+  "description": "swoole crop image",
+  "type": "library",
+  "keywords": [
+    "php",
+    "swoole",
+    "crop image"
+  ],
+  "license": "BSD-3-Clause",
+  "authors": [
+    {
+      "name": "liaomars",
+      "email": "liaoyunyu@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.1.0",
+    "ext-swoole": ">=4.2.13",
+    "imagine/imagine": "0.6.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "Thumb\\": "src/"
+    }
+  }
+}
