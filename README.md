@@ -3,7 +3,7 @@
 这个项目目前只用在个人项目上面,其它使用场景可能会有问题.
 
 
-##基本功能
+## 基本功能
 
 ### URL构成
 http://pic.gz99.cn/thumb.php?file=201904/qSrZ9z182RJC,c_fill,h_100,w_100.jpg
@@ -20,9 +20,10 @@ w_100: 表示裁剪成宽100
 
 
 ## Swoole + Nginx的配置
-> Swoole虽说可以提供http服务,但是有些协议支持不够Nginx老牌项目的完善,通过Nginx代理到swoole这样结合两者的优点
+> Swoole虽说可以提供http服务,但是有些协议不够Nginx老牌项目的完善,通过Nginx代理到swoole这样结合两者的优点
 
 """
+
 server 
 {
     listen       端口;
@@ -36,6 +37,7 @@ server
         }
     }
 }
+
 """
 
 
