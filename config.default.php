@@ -17,20 +17,12 @@ return [
             'max_width' => 2000,
             'max_height' => 2000,
             'quality' => 80,
-            'redirect_referer' => true,
-            'allow_extensions' => array(),
-            'allow_sizes' => array(
-                //Suggest keep empty here to be overwrite
+            'allow_extensions' => [],
+            'allow_sizes' => [
                 '200*200',
                 '100*100',
                 '313*313',
-            ),
-            'disable_operates' => array(
-                //Suggest keep empty here to be overwrite
-                //'filter',
-                //'crop',
-                //'dummy',
-            ),
+            ],
             // separator of class in url
             'class_separator' => '!',
             'classes' => array(
