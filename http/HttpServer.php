@@ -38,8 +38,7 @@ class HttpServer
     {
         $requestUri = $request->server['request_uri'];
         if ($requestUri == '/favicon.ico') {
-            $response->end();
-            return;
+            return $response->end();
         }
 
         try {
@@ -63,24 +62,26 @@ class HttpServer
         } catch (Exception $e) {
             $response->end($e->getMessage());
         }
-
     }
 
 
     public function onStart()
     {
-        swoole_set_process_name($this->_config['master_process_name']);
+        if (PHP_OS != 'Darwin')
+            swoole_set_process_name($this->_config['master_process_name']);
     }
 
     public function onManagerStart()
     {
-        swoole_set_process_name($this->_config['manager_process_name']);
+        if (PHP_OS != 'Darwin')
+            swoole_set_process_name($this->_config['manager_process_name']);
     }
 
 
     public function onWorkerStart()
     {
-        swoole_set_process_name($this->_config['worker_process_name']);
+        if (PHP_OS != 'Darwin')
+            swoole_set_process_name($this->_config['worker_process_name']);
     }
 
     public function onTask(\swoole_server $serv, $taskId, $src_worker_id, mixed $data)
