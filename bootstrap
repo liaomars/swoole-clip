@@ -8,7 +8,7 @@ defined('LOG') or define('LOG', ROOT . DIRECTORY_SEPARATOR . 'log');
 
 $loaderFile = ROOT . '/vendor/autoload.php';
 
-if(file_exist($loaderFile)){
+if(file_exists($loaderFile)){
     $loader = include_once ROOT . '/vendor/autoload.php';
     $loader->add('Thumb\\', ROOT . '/src');//这里是因为src目录是自定义的目录,不是vendor下面的目录.所以要这样加载
 }else{
